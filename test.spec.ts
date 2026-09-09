@@ -1,19 +1,9 @@
-import { chromium } from '@playwright/test';
+import { test } from '@playwright/test';
 
-(async () => {
-    let browser;
+test('Extract details from the first YouTube Playwright video', async ({ page }) => {
 
     try {
         console.log('Starting Playwright...');
-
-        // Launch Playwright's Chromium browser
-        browser = await chromium.launch({
-            headless: false
-        });
-
-        console.log('Browser launched!');
-
-        const page = await browser.newPage();
 
         // Open YouTube
         await page.goto('https://www.youtube.com');
@@ -110,14 +100,8 @@ import { chromium } from '@playwright/test';
 
         console.log('Description:', description);
 
-    } catch (error) {
+    }  catch (error) {
         console.error('An error occurred:', error);
-
-    } finally {
-        // Always close the browser
-        if (browser) {
-            await browser.close();
-            console.log('Browser closed!');
-        }
+        throw error;
     }
-})();
+});

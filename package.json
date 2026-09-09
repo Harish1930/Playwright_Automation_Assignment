@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-      "start": "tsx test.ts",
+      "start": "playwright test",
       "setup": "playwright install chromium"
   },
   "keywords": [],
