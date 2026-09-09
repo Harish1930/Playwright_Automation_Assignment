@@ -1,0 +1,17 @@
+{
+  "name": "playwright_automation_assignment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+      "start": "tsx test.ts",
+      "setup": "playwright install chromium"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "tsx": "^4.23.13"
+  }
+}
